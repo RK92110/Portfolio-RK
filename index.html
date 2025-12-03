@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="DarkVeil.js"></script>
+    <script src="script.js"></script>
+    <title>Portfolio RK</title>
+</head>
+<body>
+    <script>
+        // Initialize Floating Lines background with custom parameters
+        const floatingLines = new FloatingLines({
+            speed: 1.2,              // Animation speed
+            lineCount: 15,           // Number of floating lines
+            lineWidth: 2.0,          // Width of each line
+            intensity: 0.8,          // Visual intensity
+            colorShift: 0.1,         // Color variation
+            waveAmplitude: 0.6       // Wave motion amplitude
+        });
+        floatingLines.init('floating-lines-bg');
+    </script>
+
+    <header>
+        <h6> </h6>
+      
+                <nav>
+            <a href="index.html" class="active">Accueil</a>
+            <a href="index3.html">Projet</a>
+             <a href="index4.html">Certifications</a>
+             <a href="index5.html">Veille</a>
+           <a href="index2.html">Contact</a>
+           <a download href="SIO2B Riyad CV.pdf"> CV</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="home">  
+            <div class="home-img">
+              <img src="unnamed.jpg">
+            </div>
+            <div class="home-content">
+                <h1>Bonjour ,C'est <span>Riyad KAYAT</span></h1>
+                <h3 class="typing-text">Guidé par la curiosité et la volonté d’apprendre, je cherche à enrichir mes compétences en développement tout en participant à la conception de solutions utiles et efficaces.</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/riyad-kayat-065b13291/"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/RK92110"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/RiyadRK9"><i class="fa-brands fa-x-twitter"></i></a>
+           
+                </div>
+            
+            </div>
+        </section>
+    </main>
+
+    
+    
+
+
+</body>
+</html>
