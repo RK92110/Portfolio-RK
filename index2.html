@@ -4,26 +4,30 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style2.css">
+    <script src="script.js" defer></script>
     <title>Portfolio RK</title>
 </head>
 
 <body>
 
-   <header>
+    <header>
         <h6> </h6>
-      
-                <nav>
-            <a href="index.html" >Accueil</a>
+        <div class="menu-icon" data-sidebar-btn>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav data-sidebar>
+            <a href="index.html">Accueil</a>
             <a href="index3.html">Projet</a>
-             <a href="index4.html">Certifications</a> 
-             <a href="index5.html">Veille</a>
-           <a href="index2.html" class="active" >Contact</a>
-           <a href="SIO2B Riyad CV.pdf"> CV</a>
+            <a href="index4.html">Certifications</a>
+            <a href="index5.html">Veille</a>
+            <a href="index2.html" class="active">Contact</a>
+            <a href="SIO2B Riyad CV.pdf"> CV</a>
         </nav>
     </header>
 
 
-    
+
     <main>
 
         <section class="contact" id="contact">
@@ -32,7 +36,7 @@
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="81749f38-02aa-4c4c-a5bf-0690fafe8440">
 
-                    
+
 
 
                     <label for="name">Votre nom:</label>
@@ -43,14 +47,14 @@
 
                     <label for="message">Votre message:</label>
                     <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-                    
-                <button type="submit">Envoyer</button>
-                
+
+                    <button type="submit">Envoyer</button>
+
                 </form>
             </div>
         </section>
     </main>
-    
+
 
 </body>
 

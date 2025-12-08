@@ -3,13 +3,15 @@
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="DarkVeil.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Portfolio RK</title>
 </head>
+
 <body>
     <script>
         // Initialize Floating Lines background with custom parameters
@@ -26,15 +28,18 @@
 
     <header>
         <h6> </h6>
-      
-                <nav>
+        <div class="menu-icon" data-sidebar-btn>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav data-sidebar>
             <a href="index.html" class="active">Accueil</a>
             <a href="index3.html">Projet</a>
-             <a href="index4.html">Certifications</a>
-             <a href="index5.html">Veille</a>
-           <a href="index2.html">Contact</a>
-           <a href="SIO2B Riyad CV.pdf"> CV</a>
-           <a href="javascript:void(0);" class="dark-mode-toggle" onclick="toggleDarkMode()">
+            <a href="index4.html">Certifications</a>
+            <a href="index5.html">Veille</a>
+            <a href="index2.html">Contact</a>
+            <a href="SIO2B Riyad CV.pdf"> CV</a>
+            <a href="javascript:void(0);" class="dark-mode-toggle" onclick="toggleDarkMode()">
                 <i class="fas fa-moon"></i>
                 <audio id="dark-mode-sound" src="dark-mode-sound.mp3"></audio>
             </a>
@@ -43,25 +48,28 @@
 
 
     <main>
-        <section class="home">  
+        <section class="home">
             <div class="home-img">
-              <img src="unnamed.jpg">
+                <img src="unnamed.jpg">
             </div>
             <div class="home-content">
                 <h1>Bonjour ,C'est <span>Riyad KAYAT</span></h1>
-                <h3 class="typing-text">Guidé par la curiosité et la volonté d’apprendre, je cherche à enrichir mes compétences en développement tout en participant à la conception de solutions utiles et efficaces.</h3>
+                <h3 class="typing-text">Guidé par la curiosité et la volonté d’apprendre, je cherche à enrichir mes
+                    compétences en développement tout en participant à la conception de solutions utiles et efficaces.
+                </h3>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/riyad-kayat-065b13291/"><i
                             class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/RK92110"><i class="fa-brands fa-github"></i></a>
                     <a href="https://x.com/RiyadRK9"><i class="fa-brands fa-x-twitter"></i></a>
-           
+
                 </div>
-            
+
             </div>
         </section>
     </main>
 
 
 </body>
+
 </html>
