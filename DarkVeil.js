@@ -305,3 +305,4 @@ class FloatingLines {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = FloatingLines;
 }
+// End of Floating Lines Background Component

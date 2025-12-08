@@ -241,3 +241,4 @@ const DarkVeil = ({
 };
 
 export default DarkVeil;
+// End of Dark Veil Background Component
