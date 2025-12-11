@@ -48,6 +48,55 @@ header {
     font-size: 3.6rem;
     color: #fad867;
     cursor: pointer;
+    /* Contour et fond élégant */
+    border: 2px solid #fad867;
+    border-radius: 12px;
+    padding: 12px 16px;
+    background: rgba(250, 216, 103, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Effet de glow/lueur */
+    box-shadow: 0 0 15px rgba(250, 216, 103, 0.3),
+        0 0 30px rgba(250, 216, 103, 0.1),
+        inset 0 0 10px rgba(250, 216, 103, 0.05);
+    /* Transitions fluides */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(250, 216, 103, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.menu-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+    border-color: #ffd700;
+    background: rgba(250, 216, 103, 0.2);
+    box-shadow: 0 0 25px rgba(250, 216, 103, 0.5),
+        0 0 50px rgba(250, 216, 103, 0.2),
+        0 8px 16px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(250, 216, 103, 0.1);
+}
+
+.menu-icon:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-icon:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 0 20px rgba(250, 216, 103, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media(max-width: 1000px) {
@@ -89,7 +138,7 @@ nav a.active {
 }
 
 /* ==========================================================================
-   NAVIGATION MOBILE STYLES - ALREADY ON RIGHT
+   NAVIGATION MOBILE STYLES - ENHANCED MODERN DESIGN
    ========================================================================== */
 @media(max-width:1000px) {
     nav {
@@ -98,12 +147,26 @@ nav a.active {
         top: 0;
         right: 0;
         width: 50%;
+        height: auto;
+        padding: 3rem 0 2rem 0;
+
+        /* Glassmorphism moderne */
+        background: linear-gradient(135deg, rgba(22, 22, 22, 0.95), rgba(10, 10, 10, 0.98));
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        /* Bordures et ombres premium */
         border-left: 3px solid #fad867;
         border-bottom: 3px solid #fad867;
         border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        border-bottom-right-radius: 2rem;
+        box-shadow: -10px 0 40px rgba(250, 216, 103, 0.3),
+            -5px 0 20px rgba(250, 216, 103, 0.2),
+            inset 0 0 30px rgba(250, 216, 103, 0.05);
+
+        /* Animation d'entrée */
+        animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
     }
 
     nav.active {
@@ -113,13 +176,64 @@ nav a.active {
     nav a {
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1.5rem 2rem;
+        padding: 1.5rem 2rem;
+
+        /* Style de base amélioré */
+        background: rgba(250, 216, 103, 0.05);
+        border-left: 3px solid transparent;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+
+        /* Transitions fluides */
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    nav a:hover,
+    /* Effet de brillance au survol */
+    nav a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(250, 216, 103, 0.1), transparent);
+        transition: left 0.5s ease;
+    }
+
+    nav a:hover::before {
+        left: 100%;
+    }
+
+    nav a:hover {
+        background: linear-gradient(90deg, rgba(250, 216, 103, 0.2), rgba(250, 216, 103, 0.1));
+        border-left-color: #fad867;
+        transform: translateX(10px);
+        box-shadow: 0 5px 15px rgba(250, 216, 103, 0.2),
+            inset 0 0 20px rgba(250, 216, 103, 0.05);
+        color: #fad867;
+    }
+
     nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
+        background: linear-gradient(90deg, rgba(250, 216, 103, 0.25), rgba(250, 216, 103, 0.15));
+        border-left-color: #fad867;
+        color: #fad867;
+        font-weight: 600;
+        box-shadow: 0 3px 10px rgba(250, 216, 103, 0.15);
+    }
+}
+
+/* Animation d'entrée du menu */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
