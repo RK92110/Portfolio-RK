@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style2.css">
+    <script src="DarkVeil.js"></script>
     <script src="script.js" defer></script>
     <title>Portfolio RK</title>
 </head>
 
 <body>
+    <script>
+        // Initialize Floating Lines background with custom parameters
+        const floatingLines = new FloatingLines({
+            speed: 1.2,              // Animation speed
+            lineCount: 15,           // Number of floating lines
+            lineWidth: 2.0,          // Width of each line
+            intensity: 0.8,          // Visual intensity
+            colorShift: 0.1,         // Color variation
+            waveAmplitude: 0.6       // Wave motion amplitude
+        });
+        floatingLines.init('floating-lines-bg');
+    </script>
 
     <header>
         <h6> </h6>

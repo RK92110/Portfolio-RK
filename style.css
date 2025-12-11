@@ -127,14 +127,44 @@ header {
 nav {
     margin-left: auto;
     /* This pushes the nav to the right */
+
+    /* Cadre glassmorphism premium */
+    background: linear-gradient(135deg, rgba(22, 22, 22, 0.6), rgba(10, 10, 10, 0.7));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    /* Bordure dorée avec coins arrondis */
+    border: 2px solid #fad867;
+    border-radius: 50px;
+    padding: 1.2rem 2.5rem;
+
+    /* Effet de lueur */
+    box-shadow: 0 0 20px rgba(250, 216, 103, 0.3),
+        0 0 40px rgba(250, 216, 103, 0.1),
+        inset 0 0 15px rgba(250, 216, 103, 0.05);
+
+    /* Transition fluide */
+    transition: all 0.3s ease;
+}
+
+nav:hover {
+    box-shadow: 0 0 30px rgba(250, 216, 103, 0.4),
+        0 0 60px rgba(250, 216, 103, 0.15),
+        inset 0 0 20px rgba(250, 216, 103, 0.08);
+    border-color: #ffd700;
 }
 
 nav a {
     font-size: 1.8rem;
     color: white;
-    margin-left: 4rem;
+    margin-left: 3rem;
     font-weight: 500;
     transition: 0.3s ease;
+    position: relative;
+}
+
+nav a:first-child {
+    margin-left: 0;
 }
 
 nav a:hover,
