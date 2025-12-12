@@ -148,11 +148,11 @@ for (let i = 0; i < navigationLinks.length; i++) {
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
-        
-        
+
+
       }
     }
 
+
   });
 }
-
