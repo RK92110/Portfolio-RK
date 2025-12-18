@@ -310,6 +310,15 @@ nav a.active {
     padding: 0;
 }
 
+.separator-item {
+    grid-column: 1 / -1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fad867, transparent);
+    margin: 2rem 0;
+    opacity: 0.5;
+    list-style: none;
+}
+
 /* ==========================================
    SEGMENT 5: BLOG POST ITEM STYLES
 ========================================== */
