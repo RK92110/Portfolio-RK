@@ -128,6 +128,9 @@ nav {
     margin-left: auto;
     /* This pushes the nav to the right */
 
+    display: flex;
+    align-items: center;
+
     /* Cadre glassmorphism premium */
     background: linear-gradient(135deg, rgba(22, 22, 22, 0.6), rgba(10, 10, 10, 0.7));
     backdrop-filter: blur(15px);
@@ -474,3 +477,176 @@ span {
         margin-top: 4rem;
     }
 }
+
+/* ==========================================================================
+   CYBER-GOLD THEME SWITCH
+   ========================================================================== */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    margin-left: 3rem;
+    /* Espace entre le texte et le bouton */
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background: rgba(22, 22, 22, 0.8);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    border: 2px solid #fad867;
+    box-shadow: 0 0 10px rgba(250, 216, 103, 0.2), inset 0 0 5px rgba(250, 216, 103, 0.1);
+}
+
+.slider:before {
+    background-color: #fad867;
+    bottom: 4px;
+    content: "";
+    height: 22px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 22px;
+    box-shadow: 0 0 10px #fad867;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background: rgba(250, 216, 103, 0.2);
+    box-shadow: 0 0 20px rgba(250, 216, 103, 0.4);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+    background-color: #fff;
+    box-shadow: 0 0 15px #fff;
+}
+
+.slider .fa-sun,
+.slider .fa-moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.slider .fa-sun {
+    left: 8px;
+    color: #fad867;
+    opacity: 0;
+}
+
+.slider .fa-moon {
+    right: 8px;
+    color: #fad867;
+    opacity: 1;
+}
+
+input:checked+.slider .fa-sun {
+    opacity: 1;
+}
+
+input:checked+.slider .fa-moon {
+    opacity: 0;
+}
+
+/* Mobile Adjustments for Switch */
+@media(max-width: 1000px) {
+    .theme-switch-wrapper {
+        margin: 1.5rem 2rem;
+        justify-content: center;
+    }
+}
+
+/* ==========================================================================
+   LIGHT MODE STYLES - "Royal White" Theme
+   ========================================================================== */
+body.light-mode {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+    color: #1a1a1a;
+}
+
+/* Fix for Logo in Light Mode - Drop Shadow to pop against light bg */
+body.light-mode .home-img img {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* More subtle shadow */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    /* Helps white elements stand out */
+}
+
+/* Adjust the floating lines for light mode */
+body.light-mode #floating-lines-bg {
+    opacity: 0.05;
+    /* Barely visible texture */
+    filter: invert(1);
+}
+
+body.light-mode nav {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: #bfa348;
+    /* Bronze-Gold */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+}
+
+body.light-mode nav a {
+    color: #1a1a1a;
+}
+
+body.light-mode nav a:hover,
+body.light-mode nav a.active {
+    color: #bfa348;
+    background: rgba(191, 163, 72, 0.1);
+    /* Subtle hover background */
+}
+
+body.light-mode .home-content h1 span {
+    color: #d4a017;
+    /* Darker Gold for better contrast on white */
+}
+
+body.light-mode .home-content h3 {
+    color: #333;
+}
+
+body.light-mode .social-icons a {
+    color: #d4a017;
+    border-color: #d4a017;
+}
+
+body.light-mode .social-icons a:hover {
+    color: white;
+    background-color: #d4a017;
+    box-shadow: 0 0 15px rgba(212, 160, 23, 0.6);
+}
+
+/* Ensure typing text is visible */
+body.light-mode .typing-text {
+    color: #1a1a1a;
+}
+
+/* Ensure Logo Shadow always pops in dark mode logic if needed, 
+   though default styles already handle this. keeping clean. */
