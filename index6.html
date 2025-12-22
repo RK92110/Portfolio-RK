@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style3.css">
+    <script src="DarkVeil.js"></script>
+    <script src="script.js" defer></script>
+    <title>E6 - Portfolio RK</title>
+    <style>
+        .e6-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .e6-container h1 {
+            color: var(--orange-yellow-crayola);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .e6-container p {
+            color: var(--light-gray);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .excel-viewer {
+            width: 100%;
+            height: 800px;
+            border: 2px solid var(--jet);
+            border-radius: 14px;
+            background: var(--eerie-black-2);
+            overflow: hidden;
+        }
+
+        .excel-viewer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--orange-yellow-crayola);
+            color: var(--smoky-black);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-link:hover {
+            background: var(--vegas-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 209, 102, 0.3);
+        }
+
+        .download-link i {
+            margin-right: 0.5rem;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Initialize Floating Lines background with custom parameters
+        const floatingLines = new FloatingLines({
+            speed: 1.2,              // Animation speed
+            lineCount: 15,           // Number of floating lines
+            lineWidth: 2.0,          // Width of each line
+            intensity: 0.8,          // Visual intensity
+            colorShift: 0.1,         // Color variation
+            waveAmplitude: 0.6       // Wave motion amplitude
+        });
+        floatingLines.init('floating-lines-bg');
+    </script>
+
+    <header>
+        <h6> </h6>
+        <div class="menu-icon" data-sidebar-btn>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav data-sidebar>
+            <a href="index.html">Accueil</a>
+            <a href="index3.html">Projet</a>
+            <a href="index4.html">Certifications</a>
+            <a href="index5.html">Veille</a>
+            <a href="index2.html">Contact</a>
+            <a href="index6.html" class="active">E6</a>
+            <a href="SIO2B Riyad CV.pdf"> CV</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="e6-page" data-page="e6">
+            <div class="e6-container">
+                <h1>Épreuve E6 - Tableau de Synthèse</h1>
+                <p>Annexe 6.1 - Tableau de Synthèse Épreuve E4 BTS SIO 2022</p>
+
+                <div class="excel-viewer">
+                    <iframe
+                        src="https://view.officeapps.live.com/op/embed.aspx?src=https://raw.githubusercontent.com/RK92110/Portfolio-RK/main/Annexe-6-1-Tableau-Synthese-Epreuve-E4-BTS-SIO-2022%20(1).xlsx"
+                        frameborder="0">
+                        Votre navigateur ne supporte pas l'affichage des fichiers Excel. Veuillez télécharger le fichier
+                        ci-dessous.
+                    </iframe>
+                </div>
+
+                <div class="center-text">
+                    <a href="Annexe-6-1-Tableau-Synthese-Epreuve-E4-BTS-SIO-2022 (1).xlsx" class="download-link"
+                        download>
+                        <i class="fas fa-download"></i>
+                        Télécharger le fichier Excel
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+</body>
+
+</html>
