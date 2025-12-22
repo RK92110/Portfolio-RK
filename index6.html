@@ -101,6 +101,57 @@
         .center-text {
             text-align: center;
         }
+
+        .subtitle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .arrow-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(255, 209, 102, 0.2), rgba(255, 209, 102, 0.1));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 209, 102, 0.5);
+            border-radius: 50%;
+            color: var(--orange-yellow-crayola);
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(255, 209, 102, 0.2),
+                0 0 20px rgba(255, 209, 102, 0.1);
+            animation: bounce 2s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .arrow-icon:hover {
+            background: linear-gradient(135deg, rgba(255, 209, 102, 0.3), rgba(255, 209, 102, 0.2));
+            border-color: var(--orange-yellow-crayola);
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 209, 102, 0.4),
+                0 0 30px rgba(255, 209, 102, 0.3);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .subtitle-container p {
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -139,7 +190,16 @@
         <article class="e6-page" data-page="e6">
             <div class="e6-container">
                 <h1>Épreuve E6 - Tableau de Synthèse</h1>
-                <p>Annexe 6.1 - Tableau de Synthèse Épreuve E6 BTS SIO 2025</p>
+
+                <div class="subtitle-container">
+                    <div class="arrow-icon">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <p>Annexe 6.1 - Tableau de Synthèse Épreuve E6 BTS SIO 2025</p>
+                    <div class="arrow-icon">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                </div>
 
                 <div class="excel-viewer">
                     <iframe
