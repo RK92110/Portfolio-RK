@@ -164,38 +164,4 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// Dark Mode Toggle Logic
-// Dark Mode Toggle Logic
-function toggleDarkMode() {
-  const body = document.body;
-  const checkbox = document.getElementById('checkbox');
-  const audio = document.getElementById('dark-mode-sound');
 
-  body.classList.toggle('light-mode'); // Using light-mode since default is dark
-
-  // Play sound if available
-  if (audio) {
-    audio.currentTime = 0;
-    audio.play().catch(e => console.log('Audio play failed:', e));
-  }
-
-  // Save preference
-  if (body.classList.contains('light-mode')) {
-    localStorage.setItem('theme', 'light');
-    if (checkbox) checkbox.checked = true;
-  } else {
-    localStorage.setItem('theme', 'dark');
-    if (checkbox) checkbox.checked = false;
-  }
-}
-
-// Initialize Theme on Load
-document.addEventListener('DOMContentLoaded', () => {
-  const currentTheme = localStorage.getItem('theme');
-  const checkbox = document.getElementById('checkbox');
-
-  if (currentTheme === 'light') {
-    document.body.classList.add('light-mode');
-    if (checkbox) checkbox.checked = true;
-  }
-});
