@@ -123,6 +123,9 @@ header {
 nav {
     margin-left: auto;
 
+    display: flex;
+    align-items: center;
+
     /* Cadre glassmorphism premium */
     background: linear-gradient(135deg, rgba(22, 22, 22, 0.6), rgba(10, 10, 10, 0.7));
     backdrop-filter: blur(15px);
@@ -725,8 +728,8 @@ nav a.active {
     height: 34px;
     position: relative;
     width: 60px;
-    margin-left: 3rem;
-    /* Espace entre le texte et le bouton */
+    margin-left: 2rem;
+    flex-shrink: 0;
 }
 
 .theme-switch input {

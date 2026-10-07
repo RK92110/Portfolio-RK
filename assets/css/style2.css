@@ -126,7 +126,9 @@ header {
    ========================================================================== */
 nav {
     margin-left: auto;
-    /* This pushes the nav to the right */
+
+    display: flex;
+    align-items: center;
 
     /* Cadre glassmorphism premium */
     background: linear-gradient(135deg, rgba(22, 22, 22, 0.6), rgba(10, 10, 10, 0.7));
@@ -464,4 +466,99 @@ span {
     width: 100%;
     height: 100%;
     display: block;
+}
+
+/* ==========================================================================
+   THEME SWITCH - DARK / LIGHT TOGGLE
+   ========================================================================== */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    margin-left: 2rem;
+    flex-shrink: 0;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background: rgba(22, 22, 22, 0.8);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    border: 2px solid #fad867;
+    box-shadow: 0 0 10px rgba(250, 216, 103, 0.2), inset 0 0 5px rgba(250, 216, 103, 0.1);
+}
+
+.slider:before {
+    background-color: #fad867;
+    bottom: 4px;
+    content: "";
+    height: 22px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 22px;
+    box-shadow: 0 0 10px #fad867;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background: rgba(250, 216, 103, 0.2);
+    box-shadow: 0 0 20px rgba(250, 216, 103, 0.4);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: #fff;
+    box-shadow: 0 0 15px #fff;
+}
+
+.slider .fa-sun,
+.slider .fa-moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.slider .fa-sun {
+    left: 8px;
+    color: #fad867;
+    opacity: 0;
+}
+
+.slider .fa-moon {
+    right: 8px;
+    color: #fad867;
+    opacity: 1;
+}
+
+input:checked + .slider .fa-sun {
+    opacity: 1;
+}
+
+input:checked + .slider .fa-moon {
+    opacity: 0;
 }
